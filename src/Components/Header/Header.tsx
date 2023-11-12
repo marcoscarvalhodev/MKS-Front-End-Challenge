@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <StyledHeader className='container'>
       <Nav />
     </StyledHeader>
   )
