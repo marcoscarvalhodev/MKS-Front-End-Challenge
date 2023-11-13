@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface StyledTextsProps {
-  $size: 'p1' | 'p2' | 'p3' | 'p4';
+  $size: 'p1' | 'p2' | 'p3' | 'p4' | 'p5';
 }
 
 export const StyledTexts = styled.p<StyledTextsProps>`
@@ -37,6 +37,12 @@ export const StyledTexts = styled.p<StyledTextsProps>`
       
       font-weight: 700;
       color: ${theme.colors.black.normal_black};
+    `}
+
+    ${$size === 'p5' && css`
+    font-size: 2.7rem;
+    color: ${theme.colors.white};
+    font-weight: 700;
     `}
   `}
 `;

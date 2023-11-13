@@ -4,6 +4,7 @@ export const StyledNav = styled.nav`
   ${({theme}) => css`
     .logo {
       position: relative;
+      cursor: pointer;
       &:after {
       position: absolute;
       content: 'Sistemas';
@@ -20,6 +21,10 @@ export const StyledNav = styled.nav`
       justify-content: space-between;
     }
 
+    .cart-svg {
+      transition: 0.5s ease;
+    }
+    
     .cart {
       display: flex;
       align-items: center;
@@ -27,6 +32,14 @@ export const StyledNav = styled.nav`
       background: ${theme.colors.white};
       border-radius: 0.8rem;
       gap: 1.6rem;
+      &:hover {
+        cursor: pointer;
+        .cart-svg {
+          transform: rotateZ(-10deg)
+        }
+
+        
+      }
     }
     
   `}

@@ -32,5 +32,7 @@ export const StyledHeading = styled.h1<StyledHeadingsProps>`
       font-weight: 700;
       color: ${theme.colors.white};
     `}
+
+    
   `}
 `;
