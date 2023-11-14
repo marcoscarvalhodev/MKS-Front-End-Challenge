@@ -13,23 +13,25 @@ import dataItems from '../../dataItems';
 import { useCart } from '../../context/CartContext';
 
 const Hero = () => {
-  const {cartAberto} = useCart();
+  const { cartAberto } = useCart();
   const [slideState, setSlideState] = React.useState(3);
-  const {small, xsmall, large, medium, xlarge} = ContainerSizes();
+  const { small, xsmall, large, medium, xlarge } = ContainerSizes();
 
   React.useEffect(() => {
-    if(xsmall) {
-      setSlideState(1)
+    if (xsmall) {
+      setSlideState(1);
+    } else if (small) {
+      setSlideState(2);
+    } else if (large) {
+      setSlideState(3);
     }
-    else if(small) {
-      setSlideState(2)
+    else if(xlarge) {
+      setSlideState(4)
     }
-    else if(large) {
-      setSlideState(3)
-    } else {
-      setSlideState(3)
+    else {
+      setSlideState(3);
     }
-  })
+  });
 
   return (
     <StyledHero className='container' $cartAberto={cartAberto} $small={small}>
@@ -39,7 +41,6 @@ const Hero = () => {
         slidesPerView={slideState}
         pagination={{ clickable: true, type: 'bullets' }}
         grabCursor={true}
-        
         className='products-wrapper'
       >
         {dataItems().dataFiltered?.products.map((item) => {
