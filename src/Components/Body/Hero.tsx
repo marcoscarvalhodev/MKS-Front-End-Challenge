@@ -27,7 +27,7 @@ const Hero = () => {
     else if(large) {
       setSlideState(3)
     } else {
-      setSlideState(4)
+      setSlideState(3)
     }
   })
 
