@@ -1,11 +1,13 @@
 import styled, { css } from 'styled-components';
 
 interface StyledTextsProps {
-  $size: 'p1' | 'p2' | 'p3' | 'p4' | 'p5';
+  $size: 'p1' | 'p2' | 'p3' | 'p4' | 'p5' | 'p6' | 'p7';
 }
 
 export const StyledTexts = styled.p<StyledTextsProps>`
-  ${({ theme, $size }) => css`
+  ${({ theme, $size, as }) => css`
+
+
 
   font-family: 'Montserrat';
     ${$size === 'p1' &&
@@ -40,9 +42,24 @@ export const StyledTexts = styled.p<StyledTextsProps>`
     `}
 
     ${$size === 'p5' && css`
-    font-size: 2.7rem;
+    font-size: 2.8rem;
     color: ${theme.colors.white};
     font-weight: 700;
     `}
+
+    ${$size === 'p6' && css`
+      
+    font-size: 0.8rem;
+    color: ${theme.colors.black.normal_black};
+    font-weight: 400;
+    `}
+
+    ${$size === 'p7' && css`
+      
+    font-size: 1.4rem;
+    color: ${theme.colors.black.normal_black};
+    font-weight: 700;
+    `}
+    
   `}
 `;

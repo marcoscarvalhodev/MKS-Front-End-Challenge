@@ -19,6 +19,7 @@ type CartContext = {
 type CartItem = {
   id: number;
   quantidade: number;
+  
 };
 
 const CartContext = createContext({} as CartContext);

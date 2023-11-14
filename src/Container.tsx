@@ -4,15 +4,19 @@ import Hero from './Components/Body/Hero';
 
 import Cart from './Components/Body/Cart/Cart';
 import { StyledContainer } from './Styles/Container.styled';
-
+import Footer from './Components/Footer/Footer';
+import ContainerSizes from './Hooks/ContainerSizes';
 const Container = () => {
+
+const {xlarge} = ContainerSizes();
   
   return (
     
-      <StyledContainer>
+      <StyledContainer $xlarge={xlarge}>
         <Header />
         <Hero />
         <Cart />
+        <Footer />
       </StyledContainer>
     
   );

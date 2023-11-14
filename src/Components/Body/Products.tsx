@@ -4,6 +4,9 @@ import { StyledHeading } from '../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 import Bag from '../../assets/Comprar.svg?react';
 
+
+
+
 import { useCart } from '../../context/CartContext';
 
 type ItemComprado = {
