@@ -1,14 +1,55 @@
 import styled, { css } from 'styled-components';
 
-export const StyledHero = styled.section`
-  ${({ theme }) => css`
+interface StyledHeroProps {
+  $cartAberto: boolean;
+  $small: boolean | null;
+}
+
+export const StyledHero = styled.section<StyledHeroProps>`
+  ${({ theme, $cartAberto, $small }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 8.8rem;
+    justify-self: center;
+    flex: 1;
+    ${$small &&
+    css`
+      padding: 2rem 2rem;
+      margin: 0rem;
+    `}
+
+    .swiper {
+      position: relative;
+        padding: 24px 0px;
+        width: 100%;
+        overflow: visible;
+      
+      
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: -10px;
+      z-index: 999;
+      left: auto;
+      top: auto;
+
+      .swiper-pagination-bullet {
+        background: ${theme.colors.blue};
+      }
+      
+    }
+
     .products-wrapper {
       display: grid;
+
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      transition: 0.7s ease;
+      ${$cartAberto &&
+      css`
+        z-index: -3;
+      `}
       gap: 2.2rem;
       row-gap: 6rem;
     }
@@ -64,22 +105,19 @@ export const StyledHero = styled.section`
     }
 
     .comprar-button {
-      
       cursor: pointer;
       &:hover {
         .bag {
-          
-        transform: scale(0.95);
+          transform: scale(0.95);
         }
-        
       }
     }
 
-    .bag {transition: 0.7s ease;
+    .bag {
+      transition: 0.7s ease;
       width: 100%;
       height: 100%;
       padding: 1rem 0rem;
-      
     }
   `}
 `;

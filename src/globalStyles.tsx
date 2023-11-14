@@ -13,12 +13,16 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
       padding: 0px;
       caret-color: transparent;
       box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      border: 0;
     }
 
-    ${cartAberto && css`
-    body {
-      overflow: hidden;
-    }
+    ${cartAberto &&
+    css`
+      body {
+        overflow: hidden;
+      }
     `}
 
     .container {

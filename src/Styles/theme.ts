@@ -7,7 +7,8 @@ const theme = {
       light_black_2: '#373737'
     },
     white: '#FFFFFF',
-    beige: '#EEEEEE'
+    beige: '#EEEEEE',
+    gray: '#BFBFBF'
   },
   fonts: {
     font_1: 'Montserrat',
