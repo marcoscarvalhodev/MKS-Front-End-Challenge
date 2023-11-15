@@ -8,11 +8,12 @@ interface StyledCartProps {
 export const StyledCart = styled.div<StyledCartProps>`
   ${({ theme, $finalizarCompraHeight, $xsmall }) => css`
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
-
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     pointer-events: none;
 
@@ -26,9 +27,11 @@ export const StyledCart = styled.div<StyledCartProps>`
     .cart-component {
       background: ${theme.colors.blue};
       padding: 4.7rem 3.6rem;
-      height: 100%;
+      height: 100vh;
+      flex: 1;
       position: absolute;
       right: 0;
+      top: 0;
       box-shadow: -5px 0px 6px 0px rgba(0, 0, 0, 0.13);
       z-index: 999;
       .title-flex {

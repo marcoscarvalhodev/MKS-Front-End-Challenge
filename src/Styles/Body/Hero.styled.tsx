@@ -13,6 +13,9 @@ export const StyledHero = styled.section<StyledHeroProps>`
     padding: 0rem 8.8rem;
     justify-self: center;
     flex: 1;
+    ${$cartAberto && css`
+      overflow: hidden;
+    `}
     ${$small &&
     css`
       padding: 2rem 2rem;

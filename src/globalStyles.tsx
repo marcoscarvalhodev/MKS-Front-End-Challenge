@@ -18,12 +18,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
       border: 0;
     }
 
-    ${cartAberto &&
-    css`
-      body {
-        overflow: hidden;
-      }
-    `}
+    
 
     .container {
       margin-bottom: 12.6rem;
